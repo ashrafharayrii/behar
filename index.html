@@ -1285,6 +1285,7 @@
     @media (max-width: 900px) {
         .hero-inner    { grid-template-columns: 1fr; }
         .hero-visual   { display: none; }
+        .spotlight-grid { grid-template-columns: 1fr !important; }
         .why-inner     { grid-template-columns: 1fr; }
         .why-visual    { display: none; }
         .how-steps     { grid-template-columns: repeat(2, 1fr); }
@@ -1329,7 +1330,9 @@
     <div class="container">
         <div class="navbar-inner">
             <a href="#" class="navbar-brand">
-                <div class="brand-logo"><i class="bi bi-truck-front-fill"></i></div>
+                <div class="brand-logo" style="overflow:hidden;padding:0">
+                    <img src="logo.jpg" alt="Al-Behar" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+                </div>
                 <span class="brand-name">Clarix<span>.</span></span>
             </a>
 
@@ -1343,8 +1346,8 @@
             </ul>
 
             <div class="nav-cta">
-                <a href="logistics_dashboard.html" class="btn btn-nav-ghost">
-                    <i class="bi bi-grid-fill"></i> Dashboard
+                <a href="al_behar_dashboard_final.html" class="btn btn-nav-ghost" style="gap:6px">
+                    <i class="bi bi-bar-chart-line-fill"></i> Al-Behar Dashboard
                 </a>
                 <a href="#contact" class="btn btn-primary" style="padding:9px 20px;font-size:13px">
                     Get a Quote
@@ -1388,6 +1391,9 @@
                     </a>
                     <a href="#how" class="btn btn-outline">
                         <i class="bi bi-play-circle-fill"></i> See How It Works
+                    </a>
+                    <a href="al_behar_dashboard_final.html" class="btn" style="background:linear-gradient(135deg,#10b981,#059669);color:white;box-shadow:0 8px 24px rgba(16,185,129,0.35)">
+                        <i class="bi bi-speedometer2"></i> Al-Behar S&OP Dashboard
                     </a>
                 </div>
 
@@ -1560,18 +1566,72 @@
     </div>
 </section>
 
+<!-- ══════════════ DASHBOARD SPOTLIGHT ══════════════ -->
+<section style="padding:90px 0;background:var(--bg2)">
+    <div class="container">
+        <div class="spotlight-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center">
+            <!-- Photo side -->
+            <div style="position:relative">
+                <div style="border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(30,60,114,0.18);aspect-ratio:4/3;background:#dbeafe">
+                    <img src="logo.jpg" alt="Al-Behar Group" style="width:100%;height:100%;object-fit:cover;display:block">
+                </div>
+                <!-- Floating badge -->
+                <div style="position:absolute;bottom:-18px;right:24px;background:white;border-radius:16px;padding:14px 20px;box-shadow:0 12px 32px rgba(0,0,0,0.12);display:flex;align-items:center;gap:12px">
+                    <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#1e3c72,#2a5298);display:flex;align-items:center;justify-content:center;color:white;font-size:20px">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div>
+                        <div style="font-size:16px;font-weight:800;color:#1e3c72">Live S&OP Data</div>
+                        <div style="font-size:11px;color:#94a3b8">Updated in real-time</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text side -->
+            <div>
+                <div class="section-tag"><i class="bi bi-bar-chart-line-fill"></i> Al-Behar Dashboard</div>
+                <h2 class="section-heading">Your S&OP Performance<br>at a Glance</h2>
+                <p class="section-sub" style="margin-bottom:28px">
+                    The Al-Behar S&OP Dashboard delivers a full picture of Sales, Gross Profit, COGS, and Commission — by product, supplier, country, and month. Cycle-accurate and always up-to-date.
+                </p>
+
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+                    <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:#1e293b">
+                        <i class="bi bi-check-circle-fill" style="color:#10b981;font-size:18px;flex-shrink:0"></i>
+                        Monthly GP vs Target tracking across all S&OP cycles
+                    </li>
+                    <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:#1e293b">
+                        <i class="bi bi-check-circle-fill" style="color:#10b981;font-size:18px;flex-shrink:0"></i>
+                        Invoiced, Booked & Forecast breakdown by customer
+                    </li>
+                    <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:#1e293b">
+                        <i class="bi bi-check-circle-fill" style="color:#10b981;font-size:18px;flex-shrink:0"></i>
+                        Trade vs Broker commission analysis
+                    </li>
+                    <li style="display:flex;align-items:center;gap:10px;font-size:14px;color:#1e293b">
+                        <i class="bi bi-check-circle-fill" style="color:#10b981;font-size:18px;flex-shrink:0"></i>
+                        Demand analysis with supplier & product drill-down
+                    </li>
+                </ul>
+
+                <a href="al_behar_dashboard_final.html"
+                   class="btn btn-primary"
+                   style="font-size:15px;padding:15px 34px;box-shadow:0 10px 28px rgba(30,60,114,0.3)">
+                    <i class="bi bi-speedometer2"></i> Open Al-Behar Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ══════════════ WHY US ════════════════ -->
 <section class="why" id="why">
     <div class="container">
         <div class="why-inner">
             <!-- Visual -->
             <div class="why-visual">
-                <div class="why-img-bg">
-                    <i class="bi bi-truck why-img-icon" style="font-size:160px;color:rgba(30,60,114,0.08)"></i>
-                    <div style="text-align:center;z-index:1;position:relative">
-                        <div style="font-size:64px;color:rgba(30,60,114,0.3)"><i class="bi bi-diagram-3-fill"></i></div>
-                        <div style="font-size:14px;font-weight:600;color:rgba(30,60,114,0.4);margin-top:8px">Intelligent Supply Chain Network</div>
-                    </div>
+                <div class="why-img-bg" style="background:none;padding:0">
+                    <img src="img.jpg" alt="Al-Behar Operations" style="width:100%;height:100%;object-fit:cover;border-radius:24px;display:block">
                 </div>
 
                 <div class="why-bubble why-bubble-1">
@@ -1850,7 +1910,7 @@
             </div>
             <div class="cta-actions">
                 <a href="#contact" class="btn btn-accent"><i class="bi bi-rocket-takeoff-fill"></i> Get a Free Quote</a>
-                <a href="logistics_dashboard.html" class="btn btn-outline"><i class="bi bi-grid-fill"></i> Live Dashboard</a>
+                <a href="al_behar_dashboard_final.html" class="btn btn-outline"><i class="bi bi-speedometer2"></i> Al-Behar Dashboard</a>
             </div>
         </div>
     </div>
@@ -1997,7 +2057,7 @@
                     <li><a href="#"><i class="bi bi-chevron-right"></i> Careers</a></li>
                     <li><a href="#"><i class="bi bi-chevron-right"></i> News & Insights</a></li>
                     <li><a href="#"><i class="bi bi-chevron-right"></i> Certifications</a></li>
-                    <li><a href="logistics_dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a></li>
+                    <li><a href="al_behar_dashboard_final.html"><i class="bi bi-chevron-right"></i> Al-Behar Dashboard</a></li>
                 </ul>
             </div>
 
